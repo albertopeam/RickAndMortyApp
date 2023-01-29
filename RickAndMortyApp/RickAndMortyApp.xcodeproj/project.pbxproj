@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F559BCB29870B9C0057C9E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F559BCA29870B9C0057C9E3 /* Localizable.strings */; };
 		B1626B3C2983EF3000DCD25F /* RickAndMortyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1626B3B2983EF3000DCD25F /* RickAndMortyApp.swift */; };
 		B1626B3E2983EF3000DCD25F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1626B3D2983EF3000DCD25F /* CharacterView.swift */; };
 		B1626B402983EF3100DCD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1626B3F2983EF3100DCD25F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F559BCA29870B9C0057C9E3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B1626B382983EF3000DCD25F /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1626B3B2983EF3000DCD25F /* RickAndMortyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyApp.swift; sourceTree = "<group>"; };
 		B1626B3D2983EF3000DCD25F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				B1626B6A29840EF000DCD25F /* CharactersView.swift */,
 				B1626B3D2983EF3000DCD25F /* CharacterView.swift */,
 				B1626B3F2983EF3100DCD25F /* Assets.xcassets */,
+				9F559BCA29870B9C0057C9E3 /* Localizable.strings */,
 				B1626B412983EF3100DCD25F /* Preview Content */,
 			);
 			path = RickAndMortyApp;
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1626B432983EF3100DCD25F /* Preview Assets.xcassets in Resources */,
+				9F559BCB29870B9C0057C9E3 /* Localizable.strings in Resources */,
 				B1626B402983EF3100DCD25F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
