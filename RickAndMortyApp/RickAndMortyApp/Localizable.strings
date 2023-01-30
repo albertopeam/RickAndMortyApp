@@ -6,4 +6,7 @@
   
 */
 
-"character_key" = "Characters";
+"characters_key" = "Characters";
+"characters_tap_load_more_key" = "Tap to load more";
+"characters_error" = "Something went wrong!";
+"ok_key" = "OK";
