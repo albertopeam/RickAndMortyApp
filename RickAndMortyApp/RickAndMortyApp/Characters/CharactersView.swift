@@ -10,8 +10,6 @@ import SwiftUI
 //TODO: crash after a while using the app, loading data at least twice and changing the layout?
 //TODO: changing layout while loading not changes layout?
 //TODO: character state, mutable?
-//TODO: move character to PROTOCOL!!
-//TODO: search?
 struct CharactersView: View {
     @StateObject private var store: Store = .init(reducer: CharactersReducer(serviceLocator: CharactersLocator()).reducer,
                                                   state: CharactersState())
