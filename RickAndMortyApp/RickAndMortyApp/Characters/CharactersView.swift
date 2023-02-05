@@ -17,7 +17,7 @@ struct CharactersView: View {
                 ScrollView {
                     LazyVGrid(columns: store.state.columns) {
                         ForEach(store.state.characters) { character in
-                            CharacterView(character: character)
+                            CharacterView(character: character)                            
                         }
                     }
                     .padding()
@@ -30,12 +30,16 @@ struct CharactersView: View {
                         dispatchLoad()
                     }
                     .disabled(store.state.isLoading)
+                    .accessibilityLabel("Loading content")
+                    .accessibilityIdentifier("characters_loading")
                 }.refreshable {
                     dispatchRefresh()
                 }.overlay(alignment: .bottom, content: {
                     SnackBarView(message: store.state.error,
                                  actionText: NSLocalizedString("ok_key", comment: ""),
                                  action: { dispatchAckError() })
+                    .accessibilityLabel("Error message")
+                    .accessibilityIdentifier("characters_error")
                 })
             }
             .navigationTitle(NSLocalizedString("characters_key", comment: ""))
@@ -45,6 +49,8 @@ struct CharactersView: View {
                 } label: {
                     Image(systemName: store.state.gridIcon)
                 }
+                .accessibilityLabel("Toggle layout")
+                .accessibilityIdentifier("characters_toggle_layout")
             }
         }
         .task {

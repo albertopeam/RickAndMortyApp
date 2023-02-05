@@ -33,6 +33,8 @@ struct CharacterView: View {
                     Text(state.name)
                         .lineLimit(1)
                         .frame(minHeight: 20, alignment: .bottom)
+                        .accessibilityLabel("Character: \(state.character.name)")
+                        .accessibilityIdentifier("character_\(state.character.id)_name")
                 }
                 .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
                 .background(Color(UIColor.systemBackground))
