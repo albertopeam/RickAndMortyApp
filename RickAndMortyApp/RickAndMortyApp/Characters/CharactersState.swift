@@ -89,9 +89,10 @@ struct CharactersState: Equatable {
     - Parameters: newCharacters, new data
     - Parameters: totalPages, total number of pages
     - Parameters: loadedPage, the current page
+    - Parameters: isGrid, the current grid state
     - Returns: A new instance
      */
-    func loadNewPage(newCharacters: [Character], totalPages: Int, loadedPage: Int) -> Self {
+    func loadNewPage(newCharacters: [Character], totalPages: Int, loadedPage: Int, isGrid: Bool) -> Self {
         let allCharacters = characters + newCharacters
         var loadedPages = pagination.loaded
         loadedPages.append(loadedPage)
@@ -104,7 +105,7 @@ struct CharactersState: Equatable {
     - Parameters: message
     - Returns: A new instance
      */
-    func error(message: String) -> Self {
+    func error(message: String, isGrid: Bool) -> Self {
         return .init(characters: characters, isGrid: isGrid, pagination: pagination, loading: false, error: message)
     }
     

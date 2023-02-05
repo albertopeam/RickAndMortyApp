@@ -38,8 +38,7 @@ private extension CharactersReducer {
                 return loadingState.isGrid(isGrid)
             },
             {
-                let newState = loadingState.isGrid(isGrid)
-                return await load(newState)
+                return await load(loadingState)
             }
         ])
     }
@@ -48,11 +47,10 @@ private extension CharactersReducer {
         if let nextPage = state.pagination.next {
             do {
                 let output = try await serviceLocator.service().getCharacters(page: nextPage)
-                let newState = state.loadNewPage(newCharacters: output.characters, totalPages: output.page.pages, loadedPage: nextPage)
-                try? await Task.sleep(nanoseconds: 5_000_000_000)
+                let newState = state.loadNewPage(newCharacters: output.characters, totalPages: output.page.pages, loadedPage: nextPage, isGrid: isGrid)
                 return newState
             } catch {
-                return state.error(message: NSLocalizedString("characters_error", comment: ""))
+                return state.error(message: NSLocalizedString("characters_error", comment: ""), isGrid: isGrid)
             }
         } else {
             return state
